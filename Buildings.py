@@ -16,9 +16,6 @@ class Building:
     def is_valid(self):
         if self.storey > 0 and self.height > 0 and self.width > 0:
             return True
-        
-        if not all([isinstance(side, (float, int)) for side in self.show()]):
-            return False
 
 opt = input("Что вы хотите сделать?\n1. Прочитать данные из файла\n2. Записать данные в файл\n")
 if int(opt) == 1:
